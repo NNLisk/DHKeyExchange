@@ -1,6 +1,7 @@
 # DIFFIE-HELLMAN KEY EXCHANGE
 
 + Simple C# utility class for simple key exchange
++ Uses modulo operations to compute a secret shared key between two cooperating clienthosts
 + For personal use only, not externally verified
 + Built to be used in server-client chatserver over TCP
 
@@ -12,9 +13,18 @@
 
 # DIFFIE-HELLMAN logic
 
-+ two clients agree on a modulus and a generator g, both in this implementation globally fixed. Modulus is a safe 4096 bits long\nprime number provided by the Request for comments (RFC) 3526 and generator is 2. 
++ two clients agree on a modulus and a generator g, both in this implementation globally fixed. Modulus is a safe 4096 bits long prime number provided by the Request for comments (RFC) 3526 and generator is 2. 
 
-Both clients generate a random private key using \n`BigInteger pk = GeneratePrivateKey()`
+Both clients generate a random private key using `BigInteger pk = GeneratePrivateKey()`
 + based on implementation can be chat specific or even message specific
 
-Both clients generate a public key according to g^privateKey
+Both clients compute public key using `BigInteger public key = ComputePublicKey(BigInteger privateKey)`
+
+These public keys are exchanged between clients
+
+using the foreign public key, domestic private key the client uses `ComputeSharedSecret(BigInteger fpk, BigInteger dpk)`
++ Both parties have computed a shared private key
+
+---
+
+Next step, implementing the actual encryption process
