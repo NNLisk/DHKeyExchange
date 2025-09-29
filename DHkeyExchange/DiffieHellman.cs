@@ -79,7 +79,6 @@ public static class DHkeyUtil
 
         byte[] bytes = new byte[byteLength];
 
-        BigInteger publicKey = BigInteger.Pow(GetGenerator(), GetPrivateKey());
-
+        BigInteger publicKey = BigInteger.ModPow(GetGenerator(), GetPrivateKey(), GetPrime());
     }
 }
