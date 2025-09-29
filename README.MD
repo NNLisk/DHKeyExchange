@@ -15,7 +15,7 @@
 + two clients agree on a modulus and a generator g, both in this implementation globally fixed. Modulus is a safe 4096 bits long\nprime number provided by the Request for comments (RFC) 3526 and generator is 2. 
 
 Both clients generate a random private key using 
-    #BigInteger pk = GeneratePrivateKey()
+    `BigInteger pk = GeneratePrivateKey()`
 + based on implementation can be chat specific or even message specific
 
 Both clients generate a public key according to g^privateKey
