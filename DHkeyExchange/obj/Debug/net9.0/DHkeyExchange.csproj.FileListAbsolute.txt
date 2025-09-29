@@ -1,0 +1,14 @@
+C:\Programming\DiffieHellman\DHkeyExchange\obj\Debug\net9.0\DHkeyExchange.GeneratedMSBuildEditorConfig.editorconfig
+C:\Programming\DiffieHellman\DHkeyExchange\obj\Debug\net9.0\DHkeyExchange.AssemblyInfoInputs.cache
+C:\Programming\DiffieHellman\DHkeyExchange\obj\Debug\net9.0\DHkeyExchange.AssemblyInfo.cs
+C:\Programming\DiffieHellman\DHkeyExchange\obj\Debug\net9.0\DHkeyExchange.csproj.CoreCompileInputs.cache
+C:\Programming\DiffieHellman\DHkeyExchange\bin\Debug\net9.0\DHkeyExchange.exe
+C:\Programming\DiffieHellman\DHkeyExchange\bin\Debug\net9.0\DHkeyExchange.deps.json
+C:\Programming\DiffieHellman\DHkeyExchange\bin\Debug\net9.0\DHkeyExchange.runtimeconfig.json
+C:\Programming\DiffieHellman\DHkeyExchange\bin\Debug\net9.0\DHkeyExchange.dll
+C:\Programming\DiffieHellman\DHkeyExchange\bin\Debug\net9.0\DHkeyExchange.pdb
+C:\Programming\DiffieHellman\DHkeyExchange\obj\Debug\net9.0\DHkeyExchange.dll
+C:\Programming\DiffieHellman\DHkeyExchange\obj\Debug\net9.0\refint\DHkeyExchange.dll
+C:\Programming\DiffieHellman\DHkeyExchange\obj\Debug\net9.0\DHkeyExchange.pdb
+C:\Programming\DiffieHellman\DHkeyExchange\obj\Debug\net9.0\DHkeyExchange.genruntimeconfig.cache
+C:\Programming\DiffieHellman\DHkeyExchange\obj\Debug\net9.0\ref\DHkeyExchange.dll
