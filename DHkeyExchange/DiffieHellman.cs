@@ -34,6 +34,8 @@ public static class DHkeyUtil
 
     private static readonly int generator = 2;
 
+    private static BigInteger? privateKey = null;
+
     public static BigInteger GetPrime()
     {
         string cleaned = hexPrime4096.Replace("\n", "").Replace("\r", "").Replace(" ", "");
@@ -44,6 +46,13 @@ public static class DHkeyUtil
     public static int GetGenerator()
     {
         return generator;
+    }
+
+    public static BigInteger GetPrivateKey()
+    {
+        if (!privateKey.HasValue)
+            privateKey = GeneratePrivateKey();
+        return privateKey.Value;
     }
 
 
@@ -59,22 +68,25 @@ public static class DHkeyUtil
             RandomNumberGenerator.Fill(bytes);
             pk = new BigInteger(bytes, isUnsigned: true, isBigEndian: true);
         }
-
+        privateKey = pk;
         return pk;
     }
 
-    public static computePublicKey(BigInteger privateKey)
+    public static BigInteger ComputePublicKey(BigInteger privateKey)
     {
-        int byteLength = GetPrime().GetByteCount();
-
-        byte[] bytes = new byte[byteLength];
-
-        return publicKey = BigInteger.ModPow(GetGenerator(), GetPrivateKey(), GetPrime());
+        return BigInteger.ModPow(GetGenerator(), GetPrivateKey(), GetPrime());
     }
 
-    public static ComputeSecretKey(BigInteger domesticPrivateKey, BigInteger foreignPublicKey)
+    public static BigInteger ComputeSecretKey(BigInteger domesticPrivateKey, BigInteger foreignPublicKey)
     {
         BigInteger secret = BigInteger.ModPow(foreignPublicKey, domesticPrivateKey, GetPrime());
         return secret;
+    }
+
+    public static byte[] ToBytes(BigInteger key)
+    {
+        byte[] bytes = new byte[GetPrime().GetByteCount()];
+        bytes = key.toByteArray(isUnsigned: true, isBigEndian: true);
+        return bytes;
     }
 }
