@@ -31,7 +31,7 @@ public static class DHkeyUtil
         1F612970 CEE2D7AF B81BDD76 2170481C D0069127 D5B05AA9
         93B4EA98 8D8FDDC1 86FFB7DC 90A6C08F 4DF435C9 34063199
         FFFFFFFF FFFFFFFF";
-    private static BigInteger? privateKey = null;
+
     private static readonly int generator = 2;
 
     public static BigInteger GetPrime()
@@ -44,15 +44,6 @@ public static class DHkeyUtil
     public static int GetGenerator()
     {
         return generator;
-    }
-
-    public static BigInteger GetPrivateKey()
-    {
-        if (privateKey.HasValue)
-            return privateKey.Value;
-
-        privateKey = GeneratePrivateKey(GetPrime());
-        return privateKey.Value;
     }
 
 
@@ -69,7 +60,6 @@ public static class DHkeyUtil
             pk = new BigInteger(bytes, isUnsigned: true, isBigEndian: true);
         }
 
-        privateKey = pk;
         return pk;
     }
 
@@ -79,6 +69,12 @@ public static class DHkeyUtil
 
         byte[] bytes = new byte[byteLength];
 
-        BigInteger publicKey = BigInteger.ModPow(GetGenerator(), GetPrivateKey(), GetPrime());
+        return publicKey = BigInteger.ModPow(GetGenerator(), GetPrivateKey(), GetPrime());
+    }
+
+    public static ComputeSecretKey(BigInteger domesticPrivateKey, BigInteger foreignPublicKey)
+    {
+        BigInteger secret = BigInteger.ModPow(foreignPublicKey, domesticPrivateKey, GetPrime());
+        return secret;
     }
 }
