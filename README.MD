@@ -2,7 +2,7 @@
 
 + Simple C# utility class for simple key exchange
 + Uses modulo operations to compute a secret shared key between two cooperating clienthosts
-+ For personal use only, not externally verified
++ For personal use only, NOT EXTERNALLY VERIFIED
 + Built to be used in server-client chatserver over TCP
 
 # How it works
