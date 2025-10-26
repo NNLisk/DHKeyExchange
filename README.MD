@@ -27,4 +27,4 @@ using the foreign public key, domestic private key the client uses `ComputeShare
 
 ---
 
-Next step, implementing the actual encryption process
+Diffie hellman created keys can be used in the actual end-to-end encryption process
