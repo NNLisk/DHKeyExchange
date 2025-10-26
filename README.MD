@@ -1,9 +1,8 @@
 # DIFFIE-HELLMAN KEY EXCHANGE
 
-+ Simple C# utility class for simple key exchange
++ Simple C# utility class for secret key copmputing
 + Uses modulo operations to compute a secret shared key between two cooperating clienthosts
 + For personal use only, NOT EXTERNALLY VERIFIED
-+ Built to be used in server-client chatserver over TCP
 
 # How it works
 
