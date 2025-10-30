@@ -7,8 +7,7 @@
 # How it works
 
 + REQUIREMENT: .NET SDK Runtime, version 6 or later
-+ Either call this utility class according to "Logic" or try it with program in terminal
-+ If used for between clients then of course requires a program that is able to sent data over TCP
++ static utility class, call functions directly after incorporating to the filestructure
 
 # DIFFIE-HELLMAN logic
 
